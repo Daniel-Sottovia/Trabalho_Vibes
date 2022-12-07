@@ -156,38 +156,20 @@ class Vibes():
                 angulo_fase1 = self.angulo_fase(a_n_linha=self.a_n_linha(n=n, omega=self.__omega1),
                                                 b_n_linha=self.b_n_linha(n=n, omega=self.__omega1))
 
-                valor1 += (((self.a_n_linha(n=n, omega=self.__omega1) / self.__constante_k) / ((((1 - (n ** 2) * (
-                            self.__razao1 ** 2)) ** 2) + ((
-                                                                      2 * self.__qsi * n * self.__razao1) ** 2)) ** 0.5)) * math.cos(
-                    n * self.__omega1 * t - angulo_fase1)
-                           + ((self.b_n_linha(n=n, omega=self.__omega1) / self.__constante_k) / ((((1 - (n ** 2) * (
-                                    self.__razao1 ** 2)) ** 2) + ((
-                                                                              2 * self.__qsi * n * self.__razao1) ** 2)) ** 0.5)) * math.sin(
-                            n * self.__omega1 * t - angulo_fase1))
+                valor1 += (((self.a_n_linha(n=n, omega=self.__omega1) / self.__constante_k) / ((((1 - (n ** 2) * (self.__razao1 ** 2)) ** 2) + ((2 * self.__qsi * n * self.__razao1) ** 2)) ** 0.5)) * math.cos(n * self.__omega1 * t - angulo_fase1)
+                           + ((self.b_n_linha(n=n, omega=self.__omega1) / self.__constante_k) / ((((1 - (n ** 2) * (self.__razao1 ** 2)) ** 2) + ((2 * self.__qsi * n * self.__razao1) ** 2)) ** 0.5)) * math.sin(n * self.__omega1 * t - angulo_fase1))
 
                 angulo_fase2 = self.angulo_fase(a_n_linha=self.a_n_linha(n=n, omega=self.__omega2),
                                                 b_n_linha=self.b_n_linha(n=n, omega=self.__omega2))
 
-                valor2 += (((self.a_n_linha(n=n, omega=self.__omega2) / self.__constante_k) / ((((1 - (n ** 2) * (
-                            self.__razao2 ** 2)) ** 2) + ((
-                                                                      2 * self.__qsi * n * self.__razao2) ** 2)) ** 0.5)) * math.cos(
-                    n * self.__omega2 * t - angulo_fase2)
-                           + ((self.b_n_linha(n=n, omega=self.__omega2) / self.__constante_k) / ((((1 - (n ** 2) * (
-                                    self.__razao2 ** 2)) ** 2) + ((
-                                                                              2 * self.__qsi * n * self.__razao2) ** 2)) ** 0.5)) * math.sin(
-                            n * self.__omega2 * t - angulo_fase2))
+                valor2 += (((self.a_n_linha(n=n, omega=self.__omega2) / self.__constante_k) / ((((1 - (n ** 2) * (self.__razao2 ** 2)) ** 2) + ((2 * self.__qsi * n * self.__razao2) ** 2)) ** 0.5)) * math.cos(n * self.__omega2 * t - angulo_fase2)
+                           + ((self.b_n_linha(n=n, omega=self.__omega2) / self.__constante_k) / ((((1 - (n ** 2) * (self.__razao2 ** 2)) ** 2) + ((2 * self.__qsi * n * self.__razao2) ** 2)) ** 0.5)) * math.sin(n * self.__omega2 * t - angulo_fase2))
 
                 angulo_fase3 = self.angulo_fase(a_n_linha=self.a_n_linha(n=n, omega=self.__omega3),
                                                 b_n_linha=self.b_n_linha(n=n, omega=self.__omega3))
 
-                valor3 += (((self.a_n_linha(n=n, omega=self.__omega3) / self.__constante_k) / ((((1 - (n ** 2) * (
-                            self.__razao3 ** 2)) ** 2) + ((
-                                                                      2 * self.__qsi * n * self.__razao3) ** 2)) ** 0.5)) * math.cos(
-                    n * self.__omega3 * t - angulo_fase3)
-                           + ((self.b_n_linha(n=n, omega=self.__omega3) / self.__constante_k) / ((((1 - (n ** 2) * (
-                                    self.__razao3 ** 2)) ** 2) + ((
-                                                                              2 * self.__qsi * n * self.__razao3) ** 2)) ** 0.5)) * math.sin(
-                            n * self.__omega3 * t - angulo_fase3))
+                valor3 += (((self.a_n_linha(n=n, omega=self.__omega3) / self.__constante_k) / ((((1 - (n ** 2) * (self.__razao3 ** 2)) ** 2) + ((2 * self.__qsi * n * self.__razao3) ** 2)) ** 0.5)) * math.cos(n * self.__omega3 * t - angulo_fase3)
+                           + ((self.b_n_linha(n=n, omega=self.__omega3) / self.__constante_k) / ((((1 - (n ** 2) * (self.__razao3 ** 2)) ** 2) + ((2 * self.__qsi * n * self.__razao3) ** 2)) ** 0.5)) * math.sin(n * self.__omega3 * t - angulo_fase3))
 
                 n += 1
             posicao1 = constante + valor1
